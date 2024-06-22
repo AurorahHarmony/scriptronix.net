@@ -1,0 +1,44 @@
+{{ 
+    set navlinks = [
+        {name: "Home", url: "/"},
+    ]
+}}
+
+
+{{layout "container.vto"}}
+<nav>
+  <div class="flex flex-wrap items-center justify-between py-4">
+    <a href="/" class="flex items-center">
+      <img src="/static/img/logo.svg" class="h-16 mr-3" />
+      <img src="/static/img/text-logo.svg" class="h-6" />
+    </a>
+    <div>
+      <ul class="flex space-x-8">
+        {{ for link of navlinks}}
+            <li>
+            <a href="{{link.url}}" class="text-white hover:text-sky-400">{{link.name}}</a>
+            </li>
+        {{ /for}}
+      </ul>
+    </div>
+  </div>
+</nav>
+{{/layout}}
+
+<div class="min-h-96 bg-gradient-to-t from-blue-600/20 to-transparent flex justify-center flex-col text-center">
+    {{layout "container.vto"}}
+        <h1 class="text-6xl mb-3">Learn <span class="font-black">Great Things</span></h1>
+        <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    {{/layout}}
+</div>
+
+{{> const currentYear = new Date().getFullYear(); }}
+<footer>
+    <div class="my-8">
+        {{layout "container.vto"}}
+        <div class="text-center">
+        &copy; 2012-{{currentYear}} Scriptronix
+        </div>
+        {{/layout}}
+    </div>
+</footer>
