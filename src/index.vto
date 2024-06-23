@@ -27,8 +27,8 @@
 
 <div class="min-h-96 bg-gradient-to-t from-blue-600/20 to-transparent flex justify-center flex-col text-center">
     {{layout "container.vto"}}
-        <h1 class="text-6xl mb-3">Learn <span class="font-black">Great Things</span></h1>
-        <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <h1 class="text-6xl mb-3">Learn <span class="font-black bg-gradient-to-r from-sky-500 via-teal-400 to-lime-400 text-transparent bg-clip-text">Great Things</span></h1>
+        <p class="text-lg">Easy to follow guides for various computing related skills.</p>
     {{/layout}}
 </div>
 
@@ -36,8 +36,30 @@
 <footer>
     <div class="my-8">
         {{layout "container.vto"}}
-        <div class="text-center">
-        &copy; 2012-{{currentYear}} Scriptronix
+        <div class="relative bg-blue-500/10 p-8 rounded-xl hover:bg-blue-500/15 duration-200">
+        <img src="/static/img/dark-clouds.jpg" class="pointer-events-none absolute bottom-0 left-0 h-full w-full rounded-xl  mix-blend-luminosity opacity-10 object-cover object-center" loading="lazy">
+        <div class="flex mb-6">
+          <div class="flex flex-col md:w-1/2">
+            <a href="/" class="flex items-center mb-2">
+              <img src="/static/img/logo.svg" class="h-10 mr-3" />
+              <img src="/static/img/text-logo.svg" class="h-4" />
+            </a>
+            <p class="text-blue-200 font-ligh mb-8">Anyone can learn anything, and that includes you! We're here to provide free and easy to follow guides on all sorts of fun things. Why not look around, have some fun. We're here to help.
+            </p>
+            <div class="mt-auto flex items-center gap-x-2">
+              <a href="https://youtube.com/@scriptronix" class="flex items-center justify-center h-10 w-10 flex-shrink-0 rounded-md bg-blue-400/10 hover:bg-blue-400/25 text-blue-200 hover:text-white" target="_blank" rel="noreferrer">
+                <i class="bi bi-youtube text-2xl"></i>
+              </a>
+              <a href="https://github.com/Scriptronix/" class="flex items-center justify-center h-10 w-10 flex-shrink-0 rounded-md bg-blue-400/10 hover:bg-blue-400/25 text-blue-200 hover:text-white" target="_blank" rel="noreferrer">
+                <i class="bi bi-github text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4 border-white/20"/>
+          <div class="text-center text-xs text-white/60">
+          &copy; 2012-{{currentYear}} Scriptronix. View the code for this website on <a href="https://github.com/AurorahHarmony/scriptronix.net" class="hover:text-white/90" target="_blank" rel="noreferrer"><i class="bi bi-github"></i> <span class="underline">Github</span>.</a>
+          </div>
         </div>
         {{/layout}}
     </div>
