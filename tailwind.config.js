@@ -1,5 +1,9 @@
 export default {
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ["Podkova", "serif"],
+      },
+    },
   },
 };
